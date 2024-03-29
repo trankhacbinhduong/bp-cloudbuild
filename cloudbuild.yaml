@@ -1,0 +1,8 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    script: |
+      docker build -t asia-east1-docker.pkg.dev/$PROJECT_ID/bp-cloudbuild/quickstart-image:v1 .
+    automapSubstitutions: true
+
+images:
+- 'asia-east1-docker.pkg.dev/healthy-bazaar-418507/bp-cloudbuild/quickstart-image:v1'
